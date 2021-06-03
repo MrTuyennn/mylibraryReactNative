@@ -1,15 +1,28 @@
 import PButton from 'components/Button/PButton';
 import BaseScreen from 'components/Header/BaseScreen';
-import MySpinner from 'components/MySpinner/MySpinner';
-import {ptColor} from 'constants/style';
+import { ModalNotif } from 'components/Modal/ModalNotif';
+import { ptColor } from 'constants/style';
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View } from 'react-native';
 
 interface Props {
   navigation?: any;
 }
 
 const HomeScreen = (props: Props) => {
+  const handle = (): void => {
+    ModalNotif(
+      'renders',
+      'tuyen',
+      'left',
+      () => undefined,
+      'right',
+      () => undefined,
+    );
+
+    console.log('?');
+  };
+
   return (
     <BaseScreen
       navigation={props.navigation}
@@ -23,8 +36,8 @@ const HomeScreen = (props: Props) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-          <PButton onPress={() => MySpinner.show()}/>
-        </View>
+        <PButton onPress={() => handle()} />
+      </View>
     </BaseScreen>
   );
 };

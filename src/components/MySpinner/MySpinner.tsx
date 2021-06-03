@@ -48,7 +48,8 @@ export default class MySpinner extends React.PureComponent<
           isVisible={MySpinner?.instance?.state?.visible}
           onBackdropPress={() => MySpinner.hide()}
           onSwipeComplete={() => MySpinner.hide()}
-          onBackButtonPress={() => MySpinner.hide()}>
+          onBackButtonPress={() => MySpinner.hide()}
+          >
           <View
             style={[
               {...StyleSheet.absoluteFillObject},
