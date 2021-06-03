@@ -1,4 +1,6 @@
+import PButton from 'components/Button/PButton';
 import BaseScreen from 'components/Header/BaseScreen';
+import MySpinner from 'components/MySpinner/MySpinner';
 import {ptColor} from 'constants/style';
 import React from 'react';
 import {View, Text} from 'react-native';
@@ -14,7 +16,15 @@ const HomeScreen = (props: Props) => {
       appBar={{
         title: 'Trang chủ',
       }}>
-      <View style={{flex: 1, backgroundColor: ptColor.white}}></View>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: ptColor.white,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+          <PButton onPress={() => MySpinner.show()}/>
+        </View>
     </BaseScreen>
   );
 };
