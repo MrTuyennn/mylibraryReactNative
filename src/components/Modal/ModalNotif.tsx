@@ -4,11 +4,11 @@ export const ModalNotif = (
   title?: string,
   description?: string,
   buttonLeft?: string,
-  onPressButtonLeft?: () => {} | undefined,
+  onPressButtonLeft?: () => void | null,
   buttonRight?: string,
-  onPressButtonRight?: () => {} | undefined,
+  onPressButtonRight?: () => void | null,
 ) => {
-  console.log('ModalNotif',title, description);
+  console.log('fucn', onPressButtonLeft);
   setTimeout(() => {
     MyAlert.show(
       title,

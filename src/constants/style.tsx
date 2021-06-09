@@ -216,6 +216,15 @@ export const style = {
     alignItems: 'center',
     alignContent: 'center',
   },
+  header: {
+    zIndex: 9999,
+    borderTopWidth: 0,
+    height: headerHeight,
+    width: WIDTH,
+    alignItems: 'center',
+    flexDirection: 'row',
+    backgroundColor: 'transparent',
+  },
   textButtonOutLine: {
     ...ptText.SMALL1,
     color: ptColor.textColor,

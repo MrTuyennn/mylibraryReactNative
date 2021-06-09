@@ -1,7 +1,12 @@
 import {IcBack} from 'assets';
-import {HEIGHT_SCALE_RATIO, ptColor, WIDTH_SCALE_RATIO} from 'constants/style';
+import {
+  HEIGHT_SCALE_RATIO,
+  ptColor,
+  style,
+  WIDTH_SCALE_RATIO,
+} from 'constants/style';
 import React from 'react';
-import {View} from 'react-native';
+import {View, ViewStyle} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {getStatusBarHeight} from 'utils/getStatusBarHeight';
 
@@ -26,7 +31,7 @@ const BaseHeader = (props: BaseHeaderProps) => {
       <View
         style={{
           marginTop: getStatusBarHeight(),
-          height: 50 * HEIGHT_SCALE_RATIO,
+          // height: 50 * HEIGHT_SCALE_RATIO,
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -36,14 +41,7 @@ const BaseHeader = (props: BaseHeaderProps) => {
     );
   }
   return (
-    <View
-      style={{
-        marginTop: getStatusBarHeight(),
-        height: 50 * HEIGHT_SCALE_RATIO,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}>
+    <View style={[style.header] as ViewStyle}>
       {props.leftIcon ? (
         <TouchableOpacity
           onPress={() =>

@@ -9,8 +9,8 @@ interface Props {}
 const App = (props: Props) => {
   return (
     <NavigationContainer>
+       <MyAlert />
       <MySpinner />
-      <MyAlert />
       <AppNavigator />
     </NavigationContainer>
   );
