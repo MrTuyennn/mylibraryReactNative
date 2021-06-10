@@ -11,7 +11,7 @@ const PDivider = (props: Props) => {
     <Divider
       style={{
         backgroundColor: props.color || ptColor.textPlaceholderColor,
-        height: 1,
+        height: 0.5,
         width: '100%',
       }}
     />

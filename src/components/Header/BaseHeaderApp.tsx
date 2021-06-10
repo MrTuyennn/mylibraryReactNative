@@ -17,7 +17,7 @@ export interface BaseHeaderAppProps extends BaseHeaderProps {
   title?: string;
   titleCenter?: boolean;
   onlytitle?: boolean;
-  leftIcon?: any;
+  // leftIcon?: any;
 }
 
 const BaseHeaderApp = (props: BaseHeaderAppProps) => {
@@ -48,7 +48,9 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
     <BaseHeader
       navigation={props.navigation}
       leftIcon={
-        <View style={{}}>
+        <View style={{
+          marginHorizontal: 10,
+        }}>
           <IcBack
             height={20 * HEIGHT_SCALE_RATIO}
             width={20 * WIDTH_SCALE_RATIO}
@@ -71,7 +73,8 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
           ]}>
           {props.title}
         </Text>
-      }></BaseHeader>
+      }
+      {...props}></BaseHeader>
   );
 };
 

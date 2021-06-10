@@ -20,6 +20,10 @@ export interface BaseHeaderProps {
   onClickRightIcon?: () => void;
   styleRightIcon?: any;
 
+  rightIcon2?: any;
+  onClickRightIcon2?: () => void;
+  styleRightIcon2?: any;
+
   onlytitle?: boolean;
 
   navigation?: any;
@@ -63,7 +67,7 @@ const BaseHeader = (props: BaseHeaderProps) => {
           <IcBack
             height={20 * HEIGHT_SCALE_RATIO}
             width={20 * WIDTH_SCALE_RATIO}
-            color={ptColor.white}
+            color={ptColor.transparent}
           />
         </TouchableOpacity>
       )}
@@ -75,6 +79,28 @@ const BaseHeader = (props: BaseHeaderProps) => {
             marginHorizontal: 10,
           }}>
           {props.rightIcon}
+        </TouchableOpacity>
+      ) : (
+        <View
+          style={{
+            marginHorizontal: 10,
+            backgroundColor: 'transparent',
+          }}>
+          <IcBack
+            height={20 * HEIGHT_SCALE_RATIO}
+            width={20 * WIDTH_SCALE_RATIO}
+            color="transparent"
+          />
+        </View>
+      )}
+
+      {props.rightIcon2 ? (
+        <TouchableOpacity
+          onPress={() => props.onClickRightIcon2}
+          style={{
+            marginHorizontal: 10,
+          }}>
+          {props.rightIcon2}
         </TouchableOpacity>
       ) : (
         <View

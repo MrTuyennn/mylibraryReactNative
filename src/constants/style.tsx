@@ -60,7 +60,8 @@ export const ptColor = {
   white: '#ffffff',
   noWhite: '#f5f5f5',
   transparent: 'transparent',
-  lineGradientBlue: ['#0090DF', '#0090DF'],
+  lineGradientBlue: ['#ffffff', '#ffffff'],
+  lineGradientInstagram:['#8a3ab9','#bc2a8d','#e95950','#fccc63','#fbad50','#cd486b','#4c68d7']
 };
 export const ptFont = {
   REGULAR: 'Nunito-Regular',

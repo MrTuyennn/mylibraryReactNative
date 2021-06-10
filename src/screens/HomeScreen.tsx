@@ -1,9 +1,14 @@
+import {IconMess, IconPlush, LogoInsta} from 'assets';
 import PButton from 'components/Button/PButton';
+import PDivider from 'components/Divider/PDivider';
 import BaseScreen from 'components/Header/BaseScreen';
 import {ModalNotif} from 'components/Modal/ModalNotif';
+import Post from 'components/Post/Post';
+import Stories from 'components/Story/Stories';
 import {ptColor} from 'constants/style';
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 
 interface Props {
   navigation?: any;
@@ -15,7 +20,9 @@ const HomeScreen = (props: Props) => {
       'success',
       'Hệ thống xử lý thành công !!!',
       'Hủy',
-      () => {console.log('oke nha')},
+      () => {
+        console.log('oke nha');
+      },
       'Đồng ý',
       () => console.log('Nguyễn Ngọc Tuyên 2 '),
     );
@@ -36,32 +43,29 @@ const HomeScreen = (props: Props) => {
     <BaseScreen
       navigation={props.navigation}
       appBar={{
-        title: 'Trang chủ',
+        title: '',
+        leftIcon: <LogoInsta color={ptColor.black} />,
+        rightIcon: <IconPlush height={20} width={20} color={ptColor.black} />,
+        rightIcon2: <IconMess height={20} width={20} color={ptColor.black} />,
       }}>
-      <View
+      <ScrollView
         style={{
           flex: 1,
           backgroundColor: ptColor.white,
-          justifyContent: 'center',
-          alignItems: 'center',
         }}>
-        <PButton
-          containerStyle={{
-            marginVertical: 20,
-            width: '30%',
-          }}
-          title="success"
-          onPress={() => handleSuccess()}
-        />
-        <PButton
-          containerStyle={{
-            marginVertical: 20,
-            width: '30%',
-          }}
-          title="fail"
-          onPress={() => handlefail()}
-        />
-      </View>
+        {/* View Storis */}
+        <View>
+          <Stories />
+        </View>
+        {/* View Storis */}
+        <PDivider />
+        {/* View Post */}
+        <View>
+          <Post />
+        </View>
+        <Text>djfhsjdf</Text>
+        {/* View Post */}
+      </ScrollView>
     </BaseScreen>
   );
 };
