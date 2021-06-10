@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import BodyPost from './BodyPost';
+import FooterPost from './FooterPost';
 import HeaderPost from './HeaderPost';
 
 interface Props {}
@@ -10,6 +11,7 @@ const Post = (props: Props) => {
     <View>
       <HeaderPost />
       <BodyPost />
+      <FooterPost/>
     </View>
   );
 };

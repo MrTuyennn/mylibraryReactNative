@@ -76,7 +76,7 @@ const BodyPost = (props: Props) => {
                   height: 10,
                   width: 10,
                   backgroundColor: ptColor.white,
-                  margin: 8,
+                  marginHorizontal: 8,
                   borderRadius: 5,
                   top: -20,
                   zIndex: 2,

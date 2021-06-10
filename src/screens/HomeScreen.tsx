@@ -63,7 +63,6 @@ const HomeScreen = (props: Props) => {
         <View>
           <Post />
         </View>
-        <Text>djfhsjdf</Text>
         {/* View Post */}
       </ScrollView>
     </BaseScreen>

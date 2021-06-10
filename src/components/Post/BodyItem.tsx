@@ -11,6 +11,7 @@ const BodyItem = ({item}: any) => {
         height: HEIGHT / 3,
       }}>
       <Image
+        resizeMode="cover"
         style={{
           height: '100%',
           width: '100%',

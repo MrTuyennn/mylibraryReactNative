@@ -4,3 +4,6 @@ export {default as IconMess} from './icons/IconMess';
 export {default as IconPlush} from './icons/IconPlush';
 export {default as IconAdd} from './icons/IconAdd';
 export {default as IconMenu} from './icons/IconMenu';
+export {default as IconHeart} from './icons/IconHeart';
+export {default as IconCmt} from './icons/IconCmt';
+export {default as IconShare} from './icons/IconShare';
