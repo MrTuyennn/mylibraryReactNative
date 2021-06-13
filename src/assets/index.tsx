@@ -5,5 +5,8 @@ export {default as IconPlush} from './icons/IconPlush';
 export {default as IconAdd} from './icons/IconAdd';
 export {default as IconMenu} from './icons/IconMenu';
 export {default as IconHeart} from './icons/IconHeart';
+export {default as IconHeartWhite} from './icons/IconHeartWhite';
 export {default as IconCmt} from './icons/IconCmt';
 export {default as IconShare} from './icons/IconShare';
+export {default as IconSave} from './icons/IconSave';
+export {default as IconSaveBlack} from './icons/IconSaveBlack';

@@ -1,12 +1,26 @@
-import {IconCmt, IconHeart, IconShare} from 'assets';
-import IconSave from 'assets/icons/IconSave';
+import {
+  IconCmt,
+  IconHeart,
+  IconHeartWhite,
+  IconSave,
+  IconSaveBlack,
+  IconShare,
+} from 'assets';
+import PTouchableOpacity from 'components/Button/PTouchableOpacity';
+import ModalShare from 'components/ModalShare/ModalShare';
 import {FS, ptColor} from 'constants/style';
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import {View, Text} from 'react-native';
 
-interface Props {}
+interface Props {
+  ref?: any;
+}
 
 const FooterPost = (props: Props) => {
+  const [like, setlike] = useState(false);
+  const [share, setshare] = useState(false);
+  const shareModal = useRef<any>(null);
+
   return (
     <View>
       <View
@@ -18,31 +32,36 @@ const FooterPost = (props: Props) => {
           style={{
             flexDirection: 'row',
           }}>
-          <View
+          <PTouchableOpacity
+            onPress={() => setlike(!like)}
             style={{
               marginHorizontal: 10,
             }}>
-            <IconHeart color={ptColor.bgRed} />
-          </View>
+            {like ? <IconHeart /> : <IconHeartWhite />}
+          </PTouchableOpacity>
           <View
             style={{
               marginHorizontal: 10,
             }}>
             <IconCmt />
           </View>
-          <View
+          <PTouchableOpacity
+            onPress={() => {
+              shareModal?.current?.show();
+            }}
             style={{
               marginHorizontal: 10,
             }}>
             <IconShare />
-          </View>
+          </PTouchableOpacity>
         </View>
-        <View
+        <PTouchableOpacity
+          onPress={() => setshare(!share)}
           style={{
             marginHorizontal: 10,
           }}>
-          <IconSave />
-        </View>
+          {share ? <IconSaveBlack /> : <IconSave />}
+        </PTouchableOpacity>
       </View>
       <View
         style={{
@@ -74,6 +93,9 @@ const FooterPost = (props: Props) => {
           Xem tất cả bình luận
         </Text>
       </View>
+
+      {/* Modal Share */}
+      <ModalShare ref={shareModal}/>
     </View>
   );
 };

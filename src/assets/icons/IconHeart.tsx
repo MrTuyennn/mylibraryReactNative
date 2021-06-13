@@ -10,7 +10,7 @@ interface Props {
 const IconHeart = (props: Props) => {
   return (
     <Svg
-      fill={props.color || ptColor.black}
+      fill={ptColor.bgRed}
       viewBox="0 0 48 48"
       height={props.height || 20}
       width={props.width || 20}>
