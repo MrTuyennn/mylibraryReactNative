@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text,Image} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {userList} from 'components/Story/userList';
 import LinearGradient from 'react-native-linear-gradient';
 import {FS, ptColor} from 'constants/style';
-import {Image} from 'react-native-elements';
+// import {Image} from 'react-native';
 import {IconAdd} from 'assets';
 
 interface Props {}

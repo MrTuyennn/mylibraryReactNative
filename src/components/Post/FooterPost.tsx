@@ -7,11 +7,10 @@ import {
   IconShare,
 } from 'assets';
 import PTouchableOpacity from 'components/Button/PTouchableOpacity';
-import ModalShare from 'components/ModalShare/ModalShare';
 import {FS, ptColor} from 'constants/style';
 import React, {useState, useRef} from 'react';
-import {View, Text} from 'react-native';
-
+import {Text, View} from 'react-native';
+import BottomSheet from 'components/BottomSheet/BottomSheet';
 interface Props {
   ref?: any;
 }
@@ -19,12 +18,15 @@ interface Props {
 const FooterPost = (props: Props) => {
   const [like, setlike] = useState(false);
   const [share, setshare] = useState(false);
-  const shareModal = useRef<any>(null);
-
+  const isBottomSheet = useRef<any>(null);
   return (
-    <View>
+    <View
+      style={{
+        flex: 1,
+      }}>
       <View
         style={{
+          flex: 1,
           flexDirection: 'row',
           justifyContent: 'space-between',
         }}>
@@ -47,7 +49,7 @@ const FooterPost = (props: Props) => {
           </View>
           <PTouchableOpacity
             onPress={() => {
-              shareModal?.current?.show();
+              isBottomSheet.current?.show();
             }}
             style={{
               marginHorizontal: 10,
@@ -95,7 +97,7 @@ const FooterPost = (props: Props) => {
       </View>
 
       {/* Modal Share */}
-      <ModalShare ref={shareModal}/>
+      <BottomSheet ref={isBottomSheet} />
     </View>
   );
 };
