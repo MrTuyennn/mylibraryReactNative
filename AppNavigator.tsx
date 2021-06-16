@@ -23,8 +23,8 @@ const AppNavigator = (props: Props) => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen
-        name={ROUT_KEY.PanGestureHandler}
-        component={PanGestureHandler}
+        name={ROUT_KEY.HomeScreen}
+        component={HomeScreen}
       />
     </Stack.Navigator>
   );

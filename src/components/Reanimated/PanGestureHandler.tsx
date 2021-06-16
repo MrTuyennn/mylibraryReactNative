@@ -1,4 +1,4 @@
-import {BottomSheetModal, BottomSheetModalProvider} from '@gorhom/bottom-sheet';
+import BottomSheet,{BottomSheetModal, BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import React, {useCallback, useMemo, useRef} from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 

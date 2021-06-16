@@ -11,11 +11,13 @@ import {FS, ptColor} from 'constants/style';
 import React, {useState, useRef} from 'react';
 import {Text, View} from 'react-native';
 import BottomSheet from 'components/BottomSheet/BottomSheet';
-interface Props {
+export interface FooterPostProps {
   ref?: any;
+  onClickShare?: () => void;
+  onClickCmt?: () => void;
 }
 
-const FooterPost = (props: Props) => {
+const FooterPost = (props: FooterPostProps) => {
   const [like, setlike] = useState(false);
   const [share, setshare] = useState(false);
   const isBottomSheet = useRef<any>(null);
@@ -48,9 +50,7 @@ const FooterPost = (props: Props) => {
             <IconCmt />
           </View>
           <PTouchableOpacity
-            onPress={() => {
-              isBottomSheet.current?.show();
-            }}
+            onPress={props.onClickShare}
             style={{
               marginHorizontal: 10,
             }}>
@@ -95,9 +95,6 @@ const FooterPost = (props: Props) => {
           Xem tất cả bình luận
         </Text>
       </View>
-
-      {/* Modal Share */}
-      <BottomSheet ref={isBottomSheet} />
     </View>
   );
 };

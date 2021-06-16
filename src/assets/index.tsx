@@ -10,3 +10,4 @@ export {default as IconCmt} from './icons/IconCmt';
 export {default as IconShare} from './icons/IconShare';
 export {default as IconSave} from './icons/IconSave';
 export {default as IconSaveBlack} from './icons/IconSaveBlack';
+export {default as IconAddFriend} from './icons/IconAddFriend';
