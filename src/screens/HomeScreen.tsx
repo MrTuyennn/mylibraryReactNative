@@ -114,12 +114,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'grey',
   },
   contentContainer: {
-    alignItems: 'center',
-    marginTop: 20 * HEIGHT_SCALE_RATIO,
+    margin: 10 * HEIGHT_SCALE_RATIO,
   },
   itemContainer: {
-    padding: 6,
-    margin: 6,
     backgroundColor: '#eee',
   },
 });
