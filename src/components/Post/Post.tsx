@@ -2,14 +2,14 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import BodyPost from './BodyPost';
 import FooterPost, {FooterPostProps} from './FooterPost';
-import HeaderPost from './HeaderPost';
+import HeaderPost, {HeaderPostProps} from './HeaderPost';
 
-interface Props extends FooterPostProps {}
+interface Props extends FooterPostProps, HeaderPostProps {}
 
 const Post = (props: Props) => {
   return (
     <View>
-      <HeaderPost />
+      <HeaderPost {...props} />
       <BodyPost />
       <FooterPost {...props} />
     </View>

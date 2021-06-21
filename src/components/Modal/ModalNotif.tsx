@@ -8,7 +8,6 @@ export const ModalNotif = (
   buttonRight?: string,
   onPressButtonRight?: () => void | null,
 ) => {
-  console.log('fucn', onPressButtonLeft);
   setTimeout(() => {
     MyAlert.show(
       title,

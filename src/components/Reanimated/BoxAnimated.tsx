@@ -1,9 +1,13 @@
 import PButton from 'components/Button/PButton';
-import { ptColor } from 'constants/style';
+import {ptColor} from 'constants/style';
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import Animated, {
-    Easing, useAnimatedStyle, useSharedValue, withSpring, withTiming
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+  withTiming,
 } from 'react-native-reanimated';
 interface Props {}
 
@@ -13,6 +17,7 @@ const BoxAnimated = (props: Props) => {
   const config = {
     duration: 500,
     easing: Easing.bezier(0.5, 0.01, 0, 1),
+    useNativeDriver: false,
   };
 
   const style = useAnimatedStyle(() => {

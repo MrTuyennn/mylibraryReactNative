@@ -11,10 +11,10 @@ import {Image} from 'react-native-elements/dist/image/Image';
 
 interface Props {}
 
-const RenderAccount = ({item}: any) => {
-  console.log('item Account', item);
+const RenderAccount = ({item,index}: any) => {
   return (
     <View
+      key={index}
       style={[
         styles.container,
         {

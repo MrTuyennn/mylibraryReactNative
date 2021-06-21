@@ -1,12 +1,13 @@
 import {IconMenu} from 'assets';
 import {FS, ptColor} from 'constants/style';
-import React from 'react';
-import {View, Text, Image} from 'react-native';
+import React, {useRef} from 'react';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+export interface HeaderPostProps {
+  onClickMenuOptions?: () => void;
+}
 
-interface Props {}
-
-const HeaderPost = (props: Props) => {
+const HeaderPost = (props: HeaderPostProps) => {
   return (
     <View
       style={{
@@ -52,13 +53,14 @@ const HeaderPost = (props: Props) => {
           _jone_senna
         </Text>
       </View>
-      <View
+      <TouchableOpacity
+        onPress={props.onClickMenuOptions}
         style={{
           alignItems: 'center',
           justifyContent: 'center',
         }}>
         <IconMenu />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

@@ -16,6 +16,7 @@ const Academy = (props: Props) => {
   const config = {
     duration: 500,
     easing: Easing.bezier(0.5, 0.01, 0, 1),
+    useNativeDriver: false
   };
 
   const style = useAnimatedStyle(() => {

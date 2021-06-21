@@ -41,7 +41,7 @@ const Stories = (props: Props) => {
       </View>
       {userList.map((item, index) => {
         return (
-          <View style={{padding: 5}}>
+          <View key={index} style={{padding: 5}}>
             <LinearGradient
               start={{x: 1, y: 0}}
               end={{x: 0, y: 1}}

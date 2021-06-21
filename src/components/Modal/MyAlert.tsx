@@ -33,7 +33,6 @@ export default class MyAlert extends React.PureComponent<MyAlertProps, any> {
     onPressButtonRight?: any,
   ) {
     if (MyAlert.instance) {
-      console.log('có gì', onPressButtonLeft);
       MyAlert.instance.setState({
         visible: true,
         title,
@@ -72,7 +71,6 @@ export default class MyAlert extends React.PureComponent<MyAlertProps, any> {
     };
   }
   onpressLeft = () => {
-    console.log('fjdfhjdhf');
     MyAlert.hide(this.state.onPressButtonLeft);
   };
 

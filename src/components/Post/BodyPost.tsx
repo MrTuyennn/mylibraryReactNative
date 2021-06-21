@@ -48,7 +48,7 @@ const BodyPost = (props: Props) => {
           keyExtractor={(item, index) => 'key' + index}
           horizontal
           pagingEnabled
-          scrollEnabled
+          scrollEnabled={false}
           snapToAlignment="center"
           scrollEventThrottle={16}
           decelerationRate={'fast'}
@@ -89,7 +89,6 @@ const BodyPost = (props: Props) => {
     );
   }
 
-  console.log('Please provide Images');
   return null;
 };
 

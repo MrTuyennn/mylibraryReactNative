@@ -3,7 +3,6 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 
 const BodyItem = ({item}: any) => {
-  console.log('item', item);
   return (
     <View
       style={{

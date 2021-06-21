@@ -12,7 +12,6 @@ import React, {useState, useRef} from 'react';
 import {Text, View} from 'react-native';
 import BottomSheet from 'components/BottomSheet/BottomSheet';
 export interface FooterPostProps {
-  ref?: any;
   onClickShare?: () => void;
   onClickCmt?: () => void;
 }

@@ -1,28 +1,35 @@
-import {IconMess, IconPlush, LogoInsta} from 'assets';
-import PButton from 'components/Button/PButton';
-import PDivider from 'components/Divider/PDivider';
-import BaseScreen from 'components/Header/BaseScreen';
-import {ModalNotif} from 'components/Modal/ModalNotif';
-import Post from 'components/Post/Post';
-import Stories from 'components/Story/Stories';
-import {HEIGHT_SCALE_RATIO, ptColor} from 'constants/style';
-import React, {useRef, useMemo, useCallback} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {userList} from 'components/Story/userList';
-import BottomSheet, {
+import {
+  BottomSheetFlatList,
   BottomSheetModal,
   BottomSheetModalProvider,
-  BottomSheetFlatList,
 } from '@gorhom/bottom-sheet';
-import RenderAccount from 'components/ModalShare/RenderAccount';
+import {IconMess, IconPlush, LogoInsta} from 'assets';
+import ChildOption from 'comom/ChildOption';
+import PDivider from 'components/Divider/PDivider';
+import BaseScreen from 'components/Header/BaseScreen';
 import HeaderModalShare from 'components/ModalShare/HeaderModalShare';
-
+import RenderAccount from 'components/ModalShare/RenderAccount';
+import Post from 'components/Post/Post';
+import Stories from 'components/Story/Stories';
+import {userList} from 'components/Story/userList';
+import {HEIGHT_SCALE_RATIO, ptColor} from 'constants/style';
+import React, {useCallback, useMemo, useRef} from 'react';
+import {FlatList, StyleSheet, Text, View, ScrollView} from 'react-native';
+import {Modalize} from 'react-native-modalize';
+import {MenuOptions} from 'utils/typeString';
 interface Props {
   navigation?: any;
 }
 
 const HomeScreen = (props: Props) => {
+  const modalizeRef = useRef<Modalize>(null);
+
+  const onOpen = () => {
+    modalizeRef.current?.open();
+  };
+  const onClose = () => {
+    modalizeRef.current?.close();
+  };
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
@@ -67,6 +74,7 @@ const HomeScreen = (props: Props) => {
           rightIcon2: <IconMess height={20} width={20} color={ptColor.black} />,
         }}>
         <ScrollView
+          scrollEnabled={true}
           style={{
             flex: 1,
             backgroundColor: ptColor.white,
@@ -78,14 +86,20 @@ const HomeScreen = (props: Props) => {
           {/* View Storis */}
           <PDivider />
           {/* View Post */}
-          <View>
-            <Post
-              onClickShare={() => {
-                console.log('?');
-                handlePresentModalPress();
-              }}
-            />
-          </View>
+          {Array(50)
+            .fill(0)
+            .map((_, index) => {
+              return (
+                <View key={index}>
+                  <Post
+                    onClickMenuOptions={onOpen}
+                    onClickShare={() => {
+                      handlePresentModalPress();
+                    }}
+                  />
+                </View>
+              );
+            })}
           <BottomSheetModal
             ref={bottomSheetModalRef}
             index={1}
@@ -93,9 +107,10 @@ const HomeScreen = (props: Props) => {
             onChange={handleSheetChanges}>
             <HeaderModalShare />
             <BottomSheetFlatList
+              // scrollEnabled={false}
               data={userList || []}
-              // keyExtractor={i => i}
-              renderItem={({item}) => {
+              keyExtractor={i => i.toString()}
+              renderItem={({item, index}) => {
                 return <RenderAccount item={item} />;
               }}
               contentContainerStyle={styles.contentContainer}
@@ -103,6 +118,32 @@ const HomeScreen = (props: Props) => {
           </BottomSheetModal>
         </ScrollView>
       </BaseScreen>
+
+      {/* Menu Options */}
+      <Modalize
+        handlePosition="inside"
+        handleStyle={{
+          top: 13,
+          width: 40,
+          height: 6,
+          backgroundColor: '#bcc0c1',
+        }}
+        adjustToContentHeight={true}
+        withHandle={true}
+        ref={modalizeRef}>
+        {MenuOptions.map((option, index) => {
+          return (
+            <ChildOption
+              key={index}
+              typeFunc={() => {
+                onClose();
+                console.log('option._id', option._id);
+              }}
+              menuOption={option}
+            />
+          );
+        })}
+      </Modalize>
     </BottomSheetModalProvider>
   );
 };
