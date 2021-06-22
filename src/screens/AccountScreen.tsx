@@ -1,14 +1,35 @@
+import { IconBlock, IconMenuOp, IconPost } from 'assets';
+import HeaderAccount from 'comom/HeaderAccount';
+import PButtonAc from 'components/Button/PButtonAc';
+import BaseScreen from 'components/Header/BaseScreen';
+import { ptColor } from 'constants/style';
 import React from 'react';
-import {View, Text} from 'react-native';
-
+import { StyleSheet, View } from 'react-native';
+import { Button } from 'react-native-elements/dist/buttons/Button';
 interface Props {}
 
 const AccountScreen = (props: Props) => {
   return (
-    <View>
-      <Text>Thông tin người dùng</Text>
-    </View>
+    <BaseScreen appBar={{
+      leftIcon: <IconBlock/>,
+      title:'___tuyennn',
+      titleCenter:false,
+      rightIcon2:<IconMenuOp/>,
+      rightIcon:<IconPost/>
+      
+    }}>
+      <View style={styles.container}>
+        <HeaderAccount/>
+        <PButtonAc onPress={() => console.log('...')}/>
+      </View>
+    </BaseScreen>
   );
 };
 
+
+const styles = StyleSheet.create({
+   container: {
+     flex: 1,
+   }
+})
 export default AccountScreen;

@@ -34,7 +34,7 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
                 alignItems: 'center',
                 fontSize: FS(16),
                 textTransform: 'uppercase',
-                color: ptColor.white,
+                color: ptColor.black,
               },
             ]}>
             {props.title}
@@ -67,8 +67,8 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
               justifyContent: 'center',
               alignItems: 'center',
               fontSize: FS(16),
-              textTransform: 'uppercase',
-              color: ptColor.white,
+              // textTransform: 'uppercase',
+              color: ptColor.black,
             },
           ]}>
           {props.title}

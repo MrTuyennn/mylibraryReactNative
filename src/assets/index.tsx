@@ -16,3 +16,5 @@ export {default as IconHomeWhite} from './icons/IconHomeWhite';
 export {default as IconSearchBlack} from './icons/IconSearchBlack';
 export {default as IconSearchWhite} from './icons/IconSearchWhite';
 export {default as IconPost} from './icons/IconPost';
+export {default as IconBlock} from './icons/IconBlock';
+export {default as IconMenuOp} from './icons/IconMenuOp';
