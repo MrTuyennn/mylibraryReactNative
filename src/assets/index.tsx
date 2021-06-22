@@ -11,3 +11,8 @@ export {default as IconShare} from './icons/IconShare';
 export {default as IconSave} from './icons/IconSave';
 export {default as IconSaveBlack} from './icons/IconSaveBlack';
 export {default as IconAddFriend} from './icons/IconAddFriend';
+export {default as IconHome} from './icons/IconHome';
+export {default as IconHomeWhite} from './icons/IconHomeWhite';
+export {default as IconSearchBlack} from './icons/IconSearchBlack';
+export {default as IconSearchWhite} from './icons/IconSearchWhite';
+export {default as IconPost} from './icons/IconPost';
