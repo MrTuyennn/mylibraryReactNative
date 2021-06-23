@@ -1,7 +1,7 @@
+import { ptColor } from 'constants/style';
 import React from 'react';
-import {View, Text} from 'react-native';
+import { G, Path, Svg } from 'react-native-svg';
 
-import {G, Path, Svg} from 'react-native-svg';
 interface Props {
   height?: number;
   width?: number;
@@ -11,9 +11,9 @@ interface Props {
 const IconPlush = (props: Props) => {
   return (
     <Svg
-      fill={props.color}
-      height={props.height || 100}
-      width={props.width || 100}
+      fill={props.color || ptColor.black}
+      height={props.height || 20}
+      width={props.width || 20}
       viewBox="0 0 512 512">
       <G>
         <Path d="m416 241h-145v-145c0-8.284-6.716-15-15-15s-15 6.716-15 15v145h-145c-8.284 0-15 6.716-15 15s6.716 15 15 15h145v145c0 8.284 6.716 15 15 15s15-6.716 15-15v-145h145c8.284 0 15-6.716 15-15s-6.716-15-15-15z" />

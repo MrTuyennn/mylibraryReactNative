@@ -45,7 +45,8 @@ const BaseHeader = (props: BaseHeaderProps) => {
     );
   }
   return (
-    <View style={[style.header,{ height: 35 * HEIGHT_SCALE_RATIO,}] as ViewStyle}>
+    <View
+      style={[style.header, {height: 35 * HEIGHT_SCALE_RATIO}] as ViewStyle}>
       {props.leftIcon ? (
         <TouchableOpacity
           onPress={() =>
