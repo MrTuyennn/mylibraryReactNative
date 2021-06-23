@@ -11,4 +11,7 @@ export const ROUT_KEY = {
   PostScreen: 'PostScreen',
   SearchScreen: 'SearchScreen',
   BottomNavigator: 'BottomNavigator',
+  ScreenITV: 'ScreenITV',
+  ScreenPost: 'ScreenPost',
+  ScreenTagged: 'ScreenTagged',
 };

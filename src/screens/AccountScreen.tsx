@@ -3,10 +3,9 @@ import HeaderAccount from 'comom/HeaderAccount';
 import PButtonAc from 'components/Button/PButtonAc';
 import BaseScreen from 'components/Header/BaseScreen';
 import StoryAccount from 'components/Story/StoryAccount';
-import {ptColor} from 'constants/style';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Button} from 'react-native-elements/dist/buttons/Button';
+import TopNavigator from 'navigation/TopNavigator';
 interface Props {}
 
 const AccountScreen = (props: Props) => {
@@ -21,8 +20,14 @@ const AccountScreen = (props: Props) => {
       }}>
       <View style={styles.container}>
         <HeaderAccount />
+
         <PButtonAc onPress={() => console.log('...')} />
-        <StoryAccount/>
+
+        <View>
+          <StoryAccount />
+        </View>
+
+        <TopNavigator />
       </View>
     </BaseScreen>
   );

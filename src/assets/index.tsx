@@ -18,3 +18,6 @@ export {default as IconSearchWhite} from './icons/IconSearchWhite';
 export {default as IconPost} from './icons/IconPost';
 export {default as IconBlock} from './icons/IconBlock';
 export {default as IconMenuOp} from './icons/IconMenuOp';
+import {default as IconChange} from './icons/IconChanel';
+import {default as IconMorePost} from './icons/IconMorePost';
+import {default as IconTagged} from './icons/IconTagged';

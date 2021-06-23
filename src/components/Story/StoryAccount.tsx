@@ -9,9 +9,9 @@ interface Props {}
 const StoryAccount = (props: Props) => {
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-      {listStory.map(story => {
+      {listStory.map((story,index) => {
         return (
-          <View style={styles.container}>
+          <View key={index} style={styles.container}>
             <View style={styles.containerImg}>
               <Image style={styles.styleImg} source={story.imgStory} />
             </View>
