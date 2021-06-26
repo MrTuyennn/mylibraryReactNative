@@ -1,4 +1,5 @@
 import {IconMenu} from 'assets';
+import ModalPicker from 'components/Modalize/ModalPicker';
 import {FS, ptColor} from 'constants/style';
 import React, {useRef} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
@@ -8,6 +9,8 @@ export interface HeaderPostProps {
 }
 
 const HeaderPost = (props: HeaderPostProps) => {
+  const isModal = useRef(null);
+
   return (
     <View
       style={{

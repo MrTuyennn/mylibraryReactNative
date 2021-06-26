@@ -46,7 +46,12 @@ const BaseHeader = (props: BaseHeaderProps) => {
   }
   return (
     <View
-      style={[style.header, {height: 35 * HEIGHT_SCALE_RATIO}] as ViewStyle}>
+      style={
+        [
+          style.header,
+          {marginTop: getStatusBarHeight(), height: 35 * HEIGHT_SCALE_RATIO},
+        ] as ViewStyle
+      }>
       {props.leftIcon ? (
         <TouchableOpacity
           onPress={() =>

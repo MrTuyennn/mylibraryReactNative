@@ -1,68 +1,129 @@
-import {HEIGHT, ptColor, WIDTH} from 'constants/style';
-import * as React from 'react';
-import {View, StyleSheet, Text, ViewStyle} from 'react-native';
-import Modal from 'react-native-modal';
-export interface ModalShareProps {
-  styleContainer?: ViewStyle;
+import PButton from 'components/Button/PButton';
+import {userList} from 'components/Story/userList';
+import {
+  FS,
+  HEIGHT_SCALE_RATIO,
+  ptColor,
+  WIDTH_SCALE_RATIO,
+} from 'constants/style';
+import React, {forwardRef, useImperativeHandle, useRef} from 'react';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {Modalize} from 'react-native-modalize';
+import {Portal} from 'react-native-portalize';
+import HeaderModalShare from './HeaderModalShare';
+import PTouchableOpacity from 'components/Button/PTouchableOpacity';
+
+interface ModalShareProps {
+  onPressSelectShare?: (...args: any[]) => void;
 }
 
-export default class ModalShareComponent extends React.Component<
-  ModalShareProps,
-  any
-> {
-  constructor(props: ModalShareProps) {
-    super(props);
-    this.state = {
-      visible: false,
-    };
-  }
+const ModalShare = forwardRef((props: ModalShareProps, ref) => {
+  const modalizeRef = useRef<Modalize>(null);
 
-  show() {
-    this.setState({visible: true});
-  }
-  hide(onDone = () => {}) {
-    this.setState({visible: false}, () => {
-      setTimeout(() => {
-        onDone();
-      }, 310);
-    });
-  }
+  const onOpenModalShare = () => {
+    if (modalizeRef.current) {
+      modalizeRef.current.open();
+    }
+  };
 
-  public render() {
-    const {visible} = this.state;
+  useImperativeHandle(ref, () => ({
+    onOpenModalShare,
+  }));
+  // useEffect(() => {
+  //   onOpenModalShare();
+  // }, []);
+
+  const handleOnPressShare = (item: any) => {
+    if (props.onPressSelectShare) {
+      props.onPressSelectShare(item);
+    }
+    if (modalizeRef.current) {
+      modalizeRef.current.close();
+    }
+  };
+
+  const RenderAccount = ({item, index}: any) => {
     return (
-      <Modal
-        deviceWidth={WIDTH}
-        deviceHeight={HEIGHT}
-        animationIn="fadeInUp"
-        animationInTiming={300}
-        animationOutTiming={300}
-        isVisible={visible}
-        swipeDirection={undefined}
-        onBackdropPress={() => this.setState({visible: false})}
-        onSwipeComplete={() => this.setState({visible: false})}
-        onBackButtonPress={() => this.setState({visible: false})}
-        backdropOpacity={0.6}
-        hasBackdrop={true}
-        style={{
-          margin: 0,
-          padding: 0,
-          justifyContent: 'flex-end',
+      <PTouchableOpacity
+        onPress={() => {
+          handleOnPressShare(item);
         }}
-        {...this.props}>
-        <View
-          style={[
-            {
-              padding: 10,
-              borderTopLeftRadius: 18,
-              borderTopRightRadius: 18,
-              backgroundColor: ptColor.white,
-            },
-            this.props.styleContainer,
-          ]}>
-          {this.props.children}
+        key={index}
+        style={[
+          styles.container,
+          {
+            justifyContent: 'space-between',
+            marginBottom: 10 * HEIGHT_SCALE_RATIO,
+          },
+        ]}>
+        <View style={[styles.container]}>
+          <View style={styles.containerImg}>
+            <Image source={{uri: item.avatar}} style={styles.styleImg} />
+          </View>
+          <View style={styles.containerText}>
+            <Text>{item.surname}</Text>
+            <Text style={{color: ptColor.textPlaceholderColor}}>
+              {item.name}
+            </Text>
+          </View>
         </View>
-      </Modal>
+        <PButton
+          containerStyle={{
+            alignItems: 'flex-start',
+          }}
+          buttonStyle={styles.buttonStyle}
+          title="Gửi"
+          titleStyle={styles.titleStyle}
+        />
+      </PTouchableOpacity>
     );
-  }
-}
+  };
+
+  return (
+    <Portal>
+      <Modalize
+        handlePosition="inside"
+        snapPoint={300 * HEIGHT_SCALE_RATIO}
+        modalHeight={800 * HEIGHT_SCALE_RATIO}
+        HeaderComponent={<HeaderModalShare />}
+        panGestureComponentEnabled={true}
+        avoidKeyboardLikeIOS={false}
+        flatListProps={{
+          data: userList,
+          renderItem: RenderAccount,
+          bounces: false,
+          keyExtractor: (item, index) => item.id + index.toString(),
+        }}
+        ref={modalizeRef}></Modalize>
+    </Portal>
+  );
+});
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    marginHorizontal: 5 * HEIGHT_SCALE_RATIO,
+  },
+  containerImg: {
+    height: 40 * HEIGHT_SCALE_RATIO,
+    width: 40 * WIDTH_SCALE_RATIO,
+    borderRadius: 40,
+  },
+  styleImg: {
+    height: '100%',
+    width: '100%',
+    borderRadius: 40,
+    resizeMode: 'cover',
+  },
+  containerText: {
+    marginLeft: 10 * HEIGHT_SCALE_RATIO,
+  },
+  titleStyle: {
+    fontSize: FS(8),
+    marginHorizontal: 30 * WIDTH_SCALE_RATIO,
+  },
+  buttonStyle: {
+    height: 30 * HEIGHT_SCALE_RATIO,
+  },
+});
+export default ModalShare;

@@ -1,6 +1,6 @@
 import { Dimensions, Platform, StatusBar } from 'react-native';
 
-const paddingTop = 8;
+const paddingTop = 0;
 const X_WIDTH = 375;
 const X_HEIGHT = 812;
 

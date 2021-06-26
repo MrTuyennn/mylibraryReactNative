@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     flexDirection: 'row',
     margin: 10 * HEIGHT_SCALE_RATIO,
+    marginTop:20 * HEIGHT_SCALE_RATIO
   },
   containImg: {
     height: 40 * HEIGHT_SCALE_RATIO,
