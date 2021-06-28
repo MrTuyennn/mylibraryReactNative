@@ -102,7 +102,7 @@ const BaseHeader = (props: BaseHeaderProps) => {
 
       {props.rightIcon2 ? (
         <TouchableOpacity
-          onPress={() => props.onClickRightIcon2}
+          onPress={props.onClickRightIcon2}
           style={{
             marginHorizontal: 10,
           }}>

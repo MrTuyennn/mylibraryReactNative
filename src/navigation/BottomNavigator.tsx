@@ -19,6 +19,7 @@ import HomeScreen from 'screens/HomeScreen';
 import NotfiScreen from 'screens/NotfiScreen';
 import PostScreen from 'screens/PostScreen';
 import SearchScreen from 'screens/SearchScreen';
+import DrawerNavigator from './DrawerNavigator';
 interface Props {}
 const Tab = createBottomTabNavigator();
 const BottomNavigator = (props: Props) => {
@@ -52,7 +53,7 @@ const BottomNavigator = (props: Props) => {
                 )}
               </>
             );
-          } else if (route.name === ROUT_KEY.AccountScreen) {
+          } else if (route.name === ROUT_KEY.DrawerNavigator) {
             return (
               <View
                 style={[
@@ -80,7 +81,7 @@ const BottomNavigator = (props: Props) => {
       <Tab.Screen name={ROUT_KEY.SearchScreen} component={SearchScreen} />
       <Tab.Screen name={ROUT_KEY.PostScreen} component={PostScreen} />
       <Tab.Screen name={ROUT_KEY.NotfiScreen} component={NotfiScreen} />
-      <Tab.Screen name={ROUT_KEY.AccountScreen} component={AccountScreen} />
+      <Tab.Screen name={ROUT_KEY.DrawerNavigator} component={DrawerNavigator} />
     </Tab.Navigator>
   );
 };

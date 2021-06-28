@@ -6,7 +6,10 @@ import StoryAccount from 'components/Story/StoryAccount';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import TopNavigator from 'navigation/TopNavigator';
-interface Props {}
+
+interface Props {
+   navigation?:any
+}
 
 const AccountScreen = (props: Props) => {
   return (
@@ -17,6 +20,7 @@ const AccountScreen = (props: Props) => {
         titleCenter: false,
         rightIcon2: <IconMenuOp />,
         rightIcon: <IconPost />,
+        onClickRightIcon2:() => props.navigation.toggleDrawer()
       }}>
       <View style={styles.container}>
         <HeaderAccount />

@@ -14,4 +14,5 @@ export const ROUT_KEY = {
   ScreenITV: 'ScreenITV',
   ScreenPost: 'ScreenPost',
   ScreenTagged: 'ScreenTagged',
+  DrawerNavigator: 'DrawerNavigator',
 };

@@ -1,9 +1,10 @@
 import {
   CardStyleInterpolators,
-  createStackNavigator
+  createStackNavigator,
 } from '@react-navigation/stack';
-import { ROUT_KEY } from 'constants/constanst';
+import {ROUT_KEY} from 'constants/constanst';
 import BottomNavigator from 'navigation/BottomNavigator';
+import DrawerNavigator from 'navigation/DrawerNavigator';
 import React from 'react';
 interface Props {}
 
@@ -20,6 +21,10 @@ const AppNavigator = (props: Props) => {
       <Stack.Screen
         name={ROUT_KEY.BottomNavigator}
         component={BottomNavigator}
+      />
+      <Stack.Screen
+        name={ROUT_KEY.DrawerNavigator}
+        component={DrawerNavigator}
       />
     </Stack.Navigator>
   );
