@@ -15,4 +15,7 @@ export const ROUT_KEY = {
   ScreenPost: 'ScreenPost',
   ScreenTagged: 'ScreenTagged',
   DrawerNavigator: 'DrawerNavigator',
+  SyncedFlatList: 'SyncedFlatList',
+  CarouselFlatlist:'CarouselFlatlist',
+  ItemOpaFlatlist:'ItemOpaFlatlist'
 };
