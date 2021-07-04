@@ -10,12 +10,13 @@
     "apk": "cd android && gradlew clean && gradlew assembleRelease && cd ..",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "adb":"adb reverse tcp:8081 tcp:8081"
+    "adb": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^3.6.5",
     "@maksymblank/react-native-date-input": "^1.0.1",
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-masked-view/masked-view": "^0.2.5",
     "@react-navigation/bottom-tabs": "^5.11.11",
     "@react-navigation/drawer": "^5.12.5",
     "@react-navigation/material-top-tabs": "^5.3.15",

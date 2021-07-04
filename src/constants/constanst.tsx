@@ -16,6 +16,8 @@ export const ROUT_KEY = {
   ScreenTagged: 'ScreenTagged',
   DrawerNavigator: 'DrawerNavigator',
   SyncedFlatList: 'SyncedFlatList',
-  CarouselFlatlist:'CarouselFlatlist',
-  ItemOpaFlatlist:'ItemOpaFlatlist'
+  CarouselFlatlist: 'CarouselFlatlist',
+  ItemOpaFlatlist: 'ItemOpaFlatlist',
+  TouManFlatList: 'TouManFlatList',
+  CardContext: 'CardContext',
 };
