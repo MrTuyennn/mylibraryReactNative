@@ -10,6 +10,7 @@ import CarouselFlatlist from 'comom/CarouselFlatlist'
 import ItemOpaFlatlist from 'comom/ItemOpaFlatlist'
 import TouManFlatList from 'comom/TouManFlatList'
 import CardContext from 'context/CardContext'
+import MenuTopNavigator from 'navigation/MenuTopNavigator'
 import React from 'react';
 interface Props {}
 
@@ -24,8 +25,8 @@ const AppNavigator = (props: Props) => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen
-        name={ROUT_KEY.CardContext}
-        component={CardContext}
+        name={ROUT_KEY.TouManFlatList}
+        component={TouManFlatList}
       />
       {/* <Stack.Screen
         name={ROUT_KEY.DrawerNavigator}

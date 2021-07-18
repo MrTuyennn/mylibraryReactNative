@@ -7,7 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
-  Image
+  Image,
 } from 'react-native';
 const IMAGE_SIZE = 80;
 const SPASING = 10;
@@ -54,10 +54,7 @@ const SyncedFlatList = () => {
         renderItem={({item, index}) => {
           return (
             <View key={index} style={{height, width}}>
-              <Image
-                source={{uri: item?.avatar}}
-                style={styles.styleImg}
-              />
+              <Image source={{uri: item?.avatar}} style={styles.styleImg} />
             </View>
           );
         }}
@@ -73,7 +70,7 @@ const SyncedFlatList = () => {
         data={userList}
         style={{
           position: 'absolute',
-          bottom: IMAGE_SIZE ,
+          bottom: IMAGE_SIZE,
         }}
         renderItem={({item, index}) => {
           return (

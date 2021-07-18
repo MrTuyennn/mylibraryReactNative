@@ -58,10 +58,19 @@ export const ptColor = {
   borderColor2: '#aaaaaa',
   black: '#222222',
   white: '#ffffff',
+  gray05: 'rgba(0,0,0,0.05)',
   noWhite: '#f5f5f5',
   transparent: 'transparent',
   lineGradientBlue: ['#ffffff', '#ffffff'],
-  lineGradientInstagram:['#8a3ab9','#bc2a8d','#e95950','#fccc63','#fbad50','#cd486b','#4c68d7']
+  lineGradientInstagram: [
+    '#8a3ab9',
+    '#bc2a8d',
+    '#e95950',
+    '#fccc63',
+    '#fbad50',
+    '#cd486b',
+    '#4c68d7',
+  ],
 };
 export const ptFont = {
   REGULAR: 'Nunito-Regular',
