@@ -20,5 +20,7 @@ export const ROUT_KEY = {
   ItemOpaFlatlist: 'ItemOpaFlatlist',
   TouManFlatList: 'TouManFlatList',
   CardContext: 'CardContext',
-  MenuTopNavigator:'MenuTopNavigator'
+  MenuTopNavigator:'MenuTopNavigator',
+  HeaderCustom: 'HeaderCustom',
+  HeaderScrollOff:'HeaderScrollOff'
 };

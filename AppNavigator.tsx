@@ -11,6 +11,8 @@ import ItemOpaFlatlist from 'comom/ItemOpaFlatlist'
 import TouManFlatList from 'comom/TouManFlatList'
 import CardContext from 'context/CardContext'
 import MenuTopNavigator from 'navigation/MenuTopNavigator'
+import HeaderCustom from 'comom/custom/HeaderCustom'
+import HeaderScrollOff from 'comom/custom/HeaderScrollOff'
 import React from 'react';
 interface Props {}
 
@@ -25,8 +27,8 @@ const AppNavigator = (props: Props) => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
       <Stack.Screen
-        name={ROUT_KEY.TouManFlatList}
-        component={TouManFlatList}
+        name={ROUT_KEY.HeaderScrollOff}
+        component={HeaderScrollOff}
       />
       {/* <Stack.Screen
         name={ROUT_KEY.DrawerNavigator}

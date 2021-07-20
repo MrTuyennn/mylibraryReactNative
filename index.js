@@ -29,7 +29,7 @@ console.log('StatusBar.setTranslucent(true);', Platform.OS);
 if (Platform.OS === 'android') {
   console.log('StatusBar.setTranslucent(true);');
   StatusBar.setBackgroundColor('rgba(0,0,0,0)');
-  StatusBar.setTranslucent(false);
+  StatusBar.setTranslucent(true);
 }
 StatusBar.setBarStyle('dark-content');
 AppRegistry.registerComponent(appName, () => App);
