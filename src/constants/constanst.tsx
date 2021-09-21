@@ -24,4 +24,5 @@ export const ROUT_KEY = {
   HeaderCustom: 'HeaderCustom',
   HeaderScrollOff: 'HeaderScrollOff',
   TestAnimated: 'TestAnimated',
+  FBStoriesList: 'FBStoriesList',
 };
