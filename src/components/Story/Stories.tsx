@@ -5,7 +5,7 @@ import {userList} from 'components/Story/userList';
 import LinearGradient from 'react-native-linear-gradient';
 import {FS, ptColor} from 'constants/style';
 // import {Image} from 'react-native';
-import {IconAdd} from 'assets';
+import {IconAdd} from 'assets/svgs';
 
 interface Props {}
 

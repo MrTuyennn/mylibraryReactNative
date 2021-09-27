@@ -10,7 +10,7 @@ import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import {Icon, Input} from 'react-native-elements';
 import {Image} from 'react-native-elements/dist/image/Image';
-import {IconAddFriend} from 'assets';
+import {IconAddFriend} from 'assets/svgs';
 interface Props {}
 
 const HeaderModalShare = (props: Props) => {

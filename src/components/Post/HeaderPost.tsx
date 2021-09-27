@@ -1,4 +1,4 @@
-import {IconMenu} from 'assets';
+import {IconMenu} from 'assets/svgs';
 import ModalPicker from 'components/Modalize/ModalPicker';
 import {FS, ptColor} from 'constants/style';
 import React, {useRef} from 'react';

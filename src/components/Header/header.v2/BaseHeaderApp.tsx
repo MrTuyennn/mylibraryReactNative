@@ -1,22 +1,22 @@
 import {
   FS,
   HEIGHT_SCALE_RATIO,
-  ptColor,
+  ptColor, 
+  style,
   WIDTH_SCALE_RATIO,
 } from 'constants/style';
-import React from 'react';
-import {View, Text, ViewStyle} from 'react-native';
-import {getStatusBarHeight} from 'utils/getStatusBarHeight';
-import {style} from 'constants/style';
-import {IcBack} from 'assets/svgs';
-import BaseHeader, {BaseHeaderProps} from './BaseHeader';
+import React, { memo } from 'react';
+import { Text, View } from 'react-native';
+import { IconBack } from 'asset/svgs';
+import BaseHeader, { BaseHeaderProps } from './BaseHeader';
 
 export interface BaseHeaderAppProps extends BaseHeaderProps {
   navigation?: any;
-  styleTitle?: ViewStyle;
+  styleTitle?: any;
   title?: string;
   titleCenter?: boolean;
   onlytitle?: boolean;
+  colorIcon?: boolean;
   // leftIcon?: any;
 }
 
@@ -34,9 +34,9 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
                 alignItems: 'center',
                 fontSize: FS(16),
                 textTransform: 'uppercase',
-                color: ptColor.black,
               },
-            ]}>
+            ]}
+          >
             {props.title}
           </Text>
         }
@@ -48,13 +48,15 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
     <BaseHeader
       navigation={props.navigation}
       leftIcon={
-        <View style={{
-          marginHorizontal: 10,
-        }}>
-          <IcBack
+        <View
+          style={{
+            marginHorizontal: 10,
+          }}
+        >
+          <IconBack
             height={20 * HEIGHT_SCALE_RATIO}
             width={20 * WIDTH_SCALE_RATIO}
-            color={ptColor.white}
+            color={props.colorIcon ? 'transparent' : ptColor.white}
           />
         </View>
       }
@@ -66,20 +68,23 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
               textAlign: props.titleCenter ? 'center' : 'left',
               justifyContent: 'center',
               alignItems: 'center',
-              fontSize: FS(16),
-              // textTransform: 'uppercase',
-              color: ptColor.black,
+              fontSize: FS(19),
+              color: ptColor.white,
             },
-          ]}>
+            props.styleTitle,
+          ]}
+        >
           {props.title}
         </Text>
       }
-      {...props}></BaseHeader>
+      {...props}
+    ></BaseHeader>
   );
 };
 
 BaseHeaderApp.defaultProps = {
   titleCenter: true,
+  colorIcon: false,
 };
 
-export default BaseHeaderApp;
+export default memo(BaseHeaderApp);

@@ -1,4 +1,4 @@
-import {IconBlock, IconMenuOp, IconPost} from 'assets';
+import {IconBlock, IconMenuOp, IconPost} from 'assets/svgs';
 import HeaderAccount from 'comom/HeaderAccount';
 import PButtonAc from 'components/Button/PButtonAc';
 import BaseScreen from 'components/Header/BaseScreen';

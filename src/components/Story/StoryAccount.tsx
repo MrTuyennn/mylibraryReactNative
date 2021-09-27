@@ -2,7 +2,7 @@ import {FS, HEIGHT_SCALE_RATIO, ptColor} from 'constants/style';
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView, Image} from 'react-native';
 import {listStory} from './listStoryAc';
-import {IconPlush} from 'assets';
+import {IconPlush} from 'assets/svgs';
 
 interface Props {}
 

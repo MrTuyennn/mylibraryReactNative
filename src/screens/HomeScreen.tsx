@@ -1,4 +1,4 @@
-import {IconMess, IconPlush, LogoInsta} from 'assets';
+import {IconMess, IconPlush, LogoInsta} from 'assets/svgs';
 import PDivider from 'components/Divider/PDivider';
 import BaseScreen from 'components/Header/BaseScreen';
 import ModalPicker from 'components/Modalize/ModalPicker';

@@ -5,7 +5,7 @@ import {
   IconSave,
   IconSaveBlack,
   IconShare,
-} from 'assets';
+} from 'assets/svgs';
 import PTouchableOpacity from 'components/Button/PTouchableOpacity';
 import {FS, ptColor} from 'constants/style';
 import React, {useState, useRef} from 'react';

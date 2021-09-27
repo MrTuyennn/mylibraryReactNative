@@ -7,7 +7,7 @@ import {
   IconPost,
   IconSearchBlack,
   IconSearchWhite,
-} from 'assets';
+} from 'assets/svgs';
 import {ROUT_KEY} from 'constants/constanst';
 import {IMAGEPATH} from 'constants/imageConstanst';
 import {FS, ptColor} from 'constants/style';
