@@ -1,15 +1,12 @@
-import { IconMedpro, IconPlus, IconPlusColor } from 'assets/svgs';
+import {IconMedpro, IconPlush2, IconPlusColor} from 'assets/svgs';
 import ItemPosition from 'components/ItemPosition';
-import {
-  HEIGHT_SCALE_RATIO, ptColor,
-  WIDTH_SCALE_RATIO
-} from 'constants/style';
-import React, { memo } from 'react';
-import { StyleSheet, ViewStyle } from 'react-native';
+import {HEIGHT_SCALE_RATIO, ptColor, WIDTH_SCALE_RATIO} from 'constants/style';
+import React, {memo} from 'react';
+import {StyleSheet, ViewStyle} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
-import BaseHeaderApp, { BaseHeaderAppProps } from './BaseHeaderApp';
+import BaseHeaderApp, {BaseHeaderAppProps} from './BaseHeaderApp';
 
 interface Props {
   showBar?: boolean;
@@ -24,21 +21,18 @@ const BackgroundApp = (props: Props) => {
   return (
     <SafeAreaProvider>
       <LinearGradient
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0 }}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}
         colors={ptColor.lineGradientHeader}
-        style={[{ flex: 1 } as ViewStyle, props.style]}
-      >
+        style={[{flex: 1} as ViewStyle, props.style]}>
         <ItemPosition
           top={10 * HEIGHT_SCALE_RATIO}
-          left={50 * HEIGHT_SCALE_RATIO}
-        >
-          <IconPlus />
+          left={50 * HEIGHT_SCALE_RATIO}>
+          <IconPlush2 />
         </ItemPosition>
         <ItemPosition
           top={80 * WIDTH_SCALE_RATIO}
-          left={60 * HEIGHT_SCALE_RATIO}
-        >
+          left={60 * HEIGHT_SCALE_RATIO}>
           <IconPlusColor
             width={20 * WIDTH_SCALE_RATIO}
             height={20 * HEIGHT_SCALE_RATIO}
@@ -46,17 +40,15 @@ const BackgroundApp = (props: Props) => {
         </ItemPosition>
         <ItemPosition
           top={60 * WIDTH_SCALE_RATIO}
-          left={80 * HEIGHT_SCALE_RATIO}
-        >
-          <IconPlus
+          left={80 * HEIGHT_SCALE_RATIO}>
+          <IconPlush2
             width={20 * WIDTH_SCALE_RATIO}
             height={20 * HEIGHT_SCALE_RATIO}
           />
         </ItemPosition>
         <ItemPosition
           top={60 * WIDTH_SCALE_RATIO}
-          left={110 * HEIGHT_SCALE_RATIO}
-        >
+          left={110 * HEIGHT_SCALE_RATIO}>
           <IconPlusColor
             width={20 * WIDTH_SCALE_RATIO}
             height={20 * HEIGHT_SCALE_RATIO}
@@ -64,8 +56,7 @@ const BackgroundApp = (props: Props) => {
         </ItemPosition>
         <ItemPosition
           top={45 * WIDTH_SCALE_RATIO}
-          left={130 * HEIGHT_SCALE_RATIO}
-        >
+          left={130 * HEIGHT_SCALE_RATIO}>
           <IconPlusColor
             width={20 * WIDTH_SCALE_RATIO}
             height={20 * HEIGHT_SCALE_RATIO}
@@ -73,9 +64,8 @@ const BackgroundApp = (props: Props) => {
         </ItemPosition>
         <ItemPosition
           top={50 * WIDTH_SCALE_RATIO}
-          left={150 * HEIGHT_SCALE_RATIO}
-        >
-          <IconPlus />
+          left={150 * HEIGHT_SCALE_RATIO}>
+          <IconPlush2 />
         </ItemPosition>
 
         <ItemPosition top={60 * WIDTH_SCALE_RATIO} left={0}>
@@ -83,14 +73,12 @@ const BackgroundApp = (props: Props) => {
         </ItemPosition>
         <ItemPosition
           top={35 * WIDTH_SCALE_RATIO}
-          left={20 * HEIGHT_SCALE_RATIO}
-        >
-          <IconPlus height={40} width={40} />
+          left={20 * HEIGHT_SCALE_RATIO}>
+          <IconPlush2 height={40} width={40} />
         </ItemPosition>
         <ItemPosition
           top={20 * HEIGHT_SCALE_RATIO}
-          right={20 * WIDTH_SCALE_RATIO}
-        >
+          right={20 * WIDTH_SCALE_RATIO}>
           <IconMedpro
             color={props.colorMedpro ? ptColor.white : ptColor.blue}
           />
@@ -98,8 +86,7 @@ const BackgroundApp = (props: Props) => {
         <SafeAreaView
           style={styles.background}
           // @ts-ignore
-          forceInset={{ top: 'always', bottom: 0 }}
-        >
+          forceInset={{top: 'always', bottom: 0}}>
           {props.showBar && (
             <BaseHeaderApp {...props.appBar} navigation={props.navigation} />
           )}

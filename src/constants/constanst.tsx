@@ -25,4 +25,7 @@ export const ROUT_KEY = {
   HeaderScrollOff: 'HeaderScrollOff',
   TestAnimated: 'TestAnimated',
   FBStoriesList: 'FBStoriesList',
+  CircularProgress: 'CircularProgress',
+  ViewContanst: 'ViewContanst',
+  HeaderAnimatedTwitch: 'HeaderAnimatedTwitch',
 };

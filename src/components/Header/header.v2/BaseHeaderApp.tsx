@@ -7,7 +7,7 @@ import {
 } from 'constants/style';
 import React, { memo } from 'react';
 import { Text, View } from 'react-native';
-import { IconBack } from 'asset/svgs';
+import { IcBack } from 'assets/svgs';
 import BaseHeader, { BaseHeaderProps } from './BaseHeader';
 
 export interface BaseHeaderAppProps extends BaseHeaderProps {
@@ -53,7 +53,7 @@ const BaseHeaderApp = (props: BaseHeaderAppProps) => {
             marginHorizontal: 10,
           }}
         >
-          <IconBack
+          <IcBack
             height={20 * HEIGHT_SCALE_RATIO}
             width={20 * WIDTH_SCALE_RATIO}
             color={props.colorIcon ? 'transparent' : ptColor.white}

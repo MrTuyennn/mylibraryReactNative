@@ -2,6 +2,9 @@ import {
   CardStyleInterpolators,
   createStackNavigator,
 } from '@react-navigation/stack';
+import HeaderAnimatedTwitch from 'comom/custom/HeaderAnimatedTwitch';
+import CircularProgress from 'components/CircularProgress/CircularProgress';
+import ViewContanst from 'components/CircularProgress/ViewContanst';
 import FBStoriesList from 'components/FBStoriesList/FBStoriesList';
 import {ROUT_KEY} from 'constants/constanst';
 import React from 'react';
@@ -17,7 +20,10 @@ const AppNavigator = (props: Props) => {
         gestureEnabled: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
-      <Stack.Screen name={ROUT_KEY.FBStoriesList} component={FBStoriesList} />
+      <Stack.Screen
+        name={ROUT_KEY.HeaderAnimatedTwitch}
+        component={HeaderAnimatedTwitch}
+      />
       {/* <Stack.Screen
         name={ROUT_KEY.DrawerNavigator}
         component={DrawerNavigator}

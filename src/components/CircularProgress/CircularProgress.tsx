@@ -35,7 +35,7 @@ function generateArc(percentage: any, radius: any) {
 }
 
 const CircularProgress = ({
-  percentage = 40,
+  percentage = 50,
   blankColor = '#eaeaea',
   donutColor = '#43cdcf',
   fillColor = 'white',

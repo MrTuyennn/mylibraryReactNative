@@ -61,8 +61,8 @@ export const ptColor = {
   gray05: 'rgba(0,0,0,0.05)',
   noWhite: '#f5f5f5',
   transparent: 'transparent',
-  // lineGradientBlue: ['#ffffff', '#ffffff'],
-  lineGradientBlue: ['#0090DF', '#0090DF'],
+  lineGradientBlue: ['#ffffff', '#ffffff'],
+  lineGradientHeader: ['#0090DF', '#0090DF'],
   lineGradientInstagram: [
     '#8a3ab9',
     '#bc2a8d',
