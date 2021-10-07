@@ -7,6 +7,7 @@ import CircularProgress from 'components/CircularProgress/CircularProgress';
 import ViewContanst from 'components/CircularProgress/ViewContanst';
 import FBStoriesList from 'components/FBStoriesList/FBStoriesList';
 import {ROUT_KEY} from 'constants/constanst';
+import ScreenDemo from 'screens/ScreenDemo';
 import React from 'react';
 interface Props {}
 
@@ -20,10 +21,8 @@ const AppNavigator = (props: Props) => {
         gestureEnabled: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
-      <Stack.Screen
-        name={ROUT_KEY.HeaderAnimatedTwitch}
-        component={HeaderAnimatedTwitch}
-      />
+      <Stack.Screen name={ROUT_KEY.ScreenDemo} component={ScreenDemo} />
+
       {/* <Stack.Screen
         name={ROUT_KEY.DrawerNavigator}
         component={DrawerNavigator}
