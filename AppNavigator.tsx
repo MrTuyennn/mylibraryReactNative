@@ -9,6 +9,7 @@ import FBStoriesList from 'components/FBStoriesList/FBStoriesList';
 import {ROUT_KEY} from 'constants/constanst';
 import ScreenDemo from 'screens/ScreenDemo';
 import React from 'react';
+import ScreenRedux from 'screens/ScreenRedux';
 interface Props {}
 
 const Stack = createStackNavigator();
@@ -21,12 +22,7 @@ const AppNavigator = (props: Props) => {
         gestureEnabled: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
-      <Stack.Screen name={ROUT_KEY.ScreenDemo} component={ScreenDemo} />
-
-      {/* <Stack.Screen
-        name={ROUT_KEY.DrawerNavigator}
-        component={DrawerNavigator}
-      /> */}
+      <Stack.Screen name={ROUT_KEY.ScreenRedux} component={ScreenRedux} />
     </Stack.Navigator>
   );
 };

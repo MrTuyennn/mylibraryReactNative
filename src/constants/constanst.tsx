@@ -28,5 +28,6 @@ export const ROUT_KEY = {
   CircularProgress: 'CircularProgress',
   ViewContanst: 'ViewContanst',
   HeaderAnimatedTwitch: 'HeaderAnimatedTwitch',
-  ScreenDemo:'ScreenDemo'
+  ScreenDemo: 'ScreenDemo',
+  ScreenRedux: 'ScreenRedux',
 };
