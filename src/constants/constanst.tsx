@@ -30,4 +30,6 @@ export const ROUT_KEY = {
   HeaderAnimatedTwitch: 'HeaderAnimatedTwitch',
   ScreenDemo: 'ScreenDemo',
   ScreenRedux: 'ScreenRedux',
+  ScreenRegex: 'ScreenRegex',
+  AnimationExample: 'AnimationExample',
 };
