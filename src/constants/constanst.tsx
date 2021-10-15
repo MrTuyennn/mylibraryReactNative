@@ -32,4 +32,5 @@ export const ROUT_KEY = {
   ScreenRedux: 'ScreenRedux',
   ScreenRegex: 'ScreenRegex',
   AnimationExample: 'AnimationExample',
+  LoadMoreData: 'LoadMoreData',
 };
