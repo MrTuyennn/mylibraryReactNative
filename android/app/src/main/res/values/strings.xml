@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">mylibrary</string>
+    <string name="facebook_app_id">173212218313234</string> 
+    <string name="fb_login_protocol_scheme">fb173212218313234</string>
 </resources>

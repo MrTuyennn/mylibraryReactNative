@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "6410408673",
+    "project_id": "mylibaraty",
+    "storage_bucket": "mylibaraty.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6410408673:android:ca85c583d7d4df5b3f1da0",
+        "android_client_info": {
+          "package_name": "com.mylibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6410408673-toaehuhmu3r9admh68n8vp57l21h3q6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHdNr2fbJIDdZ-ya7omWcIretg6Z7Hrpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6410408673-toaehuhmu3r9admh68n8vp57l21h3q6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

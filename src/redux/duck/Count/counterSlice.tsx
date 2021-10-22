@@ -47,11 +47,4 @@ export const {
 } = counterSlice.actions;
 
 export const selectCount = (state: RootState) => state;
-export const incrementIfOdd =
-  (amount: number) => (dispatch: any, getState: any) => {
-    const currentValue = selectCount(getState());
-    if (currentValue % 2 === 1) {
-      dispatch(incrementByAmount(amount));
-    }
-  };
 export default counterSlice.reducer;

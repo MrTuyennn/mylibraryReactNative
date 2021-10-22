@@ -24,3 +24,5 @@ export {default as IconTagged} from './IconTagged';
 export {default as IconMedpro} from './IconMedpro';
 export {default as IconPlush2} from './IconPlush';
 export {default as IconPlusColor} from './IconPlusColor';
+export {default as IconGoogle} from './IconGoogle';
+export {default as IconFacebook} from './IconFacebook';

@@ -33,4 +33,5 @@ export const ROUT_KEY = {
   ScreenRegex: 'ScreenRegex',
   AnimationExample: 'AnimationExample',
   LoadMoreData: 'LoadMoreData',
+  SocailFirebase: 'SocailFirebase',
 };

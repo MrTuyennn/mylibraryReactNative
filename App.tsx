@@ -10,27 +10,31 @@ import {Host} from 'react-native-portalize';
 import {ThemeProvider} from 'context/ThemeProvider';
 import configureStore from './src/redux/configureStore.dev';
 import {PersistGate} from 'redux-persist/integration/react';
-// import {store} from './src/redux/configureStore.dev';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 interface Props {}
 const {store, persistor} = configureStore();
 import {Provider} from 'react-redux';
+
+GoogleSignin.configure({
+  webClientId: '6410408673-toaehuhmu3r9admh68n8vp57l21h3q6q.apps.googleusercontent.com',
+});
 const App = (props: Props) => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-      <NavigationContainer>
-        <ThemeProvider>
-          <Host>
-            <BottomSheetModalProvider>
-              <BottomSheet />
-              <MyAlert />
-              <MySpinner />
-              <ModalShare />
-              <AppNavigator />
-            </BottomSheetModalProvider>
-          </Host>
-        </ThemeProvider>
-      </NavigationContainer>
+        <NavigationContainer>
+          <ThemeProvider>
+            <Host>
+              <BottomSheetModalProvider>
+                <BottomSheet />
+                <MyAlert />
+                <MySpinner />
+                <ModalShare />
+                <AppNavigator />
+              </BottomSheetModalProvider>
+            </Host>
+          </ThemeProvider>
+        </NavigationContainer>
       </PersistGate>
     </Provider>
   );

@@ -6,6 +6,7 @@ import {ROUT_KEY} from 'constants/constanst';
 import React from 'react';
 import LoadMoreData from 'screens/LoadMoreData';
 import ScreenRegex from 'screens/ScreenRegex';
+import SocailFirebase from 'utils/SocailFirebase';
 interface Props {}
 
 const Stack = createStackNavigator();
@@ -18,7 +19,7 @@ const AppNavigator = (props: Props) => {
         gestureEnabled: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
-      <Stack.Screen name={ROUT_KEY.LoadMoreData} component={LoadMoreData} />
+      <Stack.Screen name={ROUT_KEY.SocailFirebase} component={SocailFirebase} />
     </Stack.Navigator>
   );
 };
