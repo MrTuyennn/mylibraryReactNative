@@ -1,7 +1,8 @@
-import { HEIGHT, ptColor, WIDTH, WIDTH_SCALE_RATIO } from 'constants/style';
+import { IconMedpro } from 'assets/svgs';
+import {HEIGHT, ptColor, WIDTH, WIDTH_SCALE_RATIO} from 'constants/style';
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { SkypeIndicator } from 'react-native-indicators';
+import {StyleSheet, View} from 'react-native';
+import {SkypeIndicator} from 'react-native-indicators';
 import Modal from 'react-native-modal';
 
 export interface MySpinnerProps {}
@@ -48,11 +49,10 @@ export default class MySpinner extends React.PureComponent<
           isVisible={MySpinner?.instance?.state?.visible}
           onBackdropPress={() => MySpinner.hide()}
           onSwipeComplete={() => MySpinner.hide()}
-          onBackButtonPress={() => MySpinner.hide()}
-          >
+          onBackButtonPress={() => MySpinner.hide()}>
           <View
             style={[
-              {...StyleSheet.absoluteFillObject},
+              // {...StyleSheet.absoluteFillObject},
               {
                 position: 'absolute',
                 width: '100%',
@@ -68,11 +68,21 @@ export default class MySpinner extends React.PureComponent<
                 height: HEIGHT,
                 borderRadius: 4 * WIDTH_SCALE_RATIO,
                 backgroundColor: '#00000030',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}>
               <SkypeIndicator
                 color={ptColor.appColor}
                 size={40 * WIDTH_SCALE_RATIO}
               />
+              <View
+                style={{
+                  position: 'absolute',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <IconMedpro />
+              </View>
             </View>
           </View>
         </Modal>

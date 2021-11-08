@@ -32,6 +32,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: ptColor.textPlaceholderColor,
     borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   titleStyle: {
     fontSize: FS(10),

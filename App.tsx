@@ -16,7 +16,8 @@ const {store, persistor} = configureStore();
 import {Provider} from 'react-redux';
 
 GoogleSignin.configure({
-  webClientId: '6410408673-toaehuhmu3r9admh68n8vp57l21h3q6q.apps.googleusercontent.com',
+  webClientId:
+    '6410408673-toaehuhmu3r9admh68n8vp57l21h3q6q.apps.googleusercontent.com',
 });
 const App = (props: Props) => {
   return (
@@ -24,11 +25,12 @@ const App = (props: Props) => {
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
           <ThemeProvider>
+            <MySpinner />
             <Host>
               <BottomSheetModalProvider>
                 <BottomSheet />
                 <MyAlert />
-                <MySpinner />
+
                 <ModalShare />
                 <AppNavigator />
               </BottomSheetModalProvider>

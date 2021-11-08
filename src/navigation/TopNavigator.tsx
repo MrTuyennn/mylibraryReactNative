@@ -1,9 +1,9 @@
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import IconChanel from 'assets/svgs/IconChanel';
 import IconMorePost from 'assets/svgs/IconMorePost';
 import IconTagged from 'assets/svgs/IconTagged';
-import {ROUT_KEY} from 'constants/constanst';
-import {ptColor} from 'constants/style';
+import { ROUT_KEY } from 'constants/constanst';
+import { HEIGHT_SCALE_RATIO, ptColor } from 'constants/style';
 import React from 'react';
 import ScreeenITV from 'screens/screensAccount/ScreenITV';
 import ScreenPost from 'screens/screensAccount/ScreenPost';
@@ -44,6 +44,7 @@ const TopNavigator = (props: Props) => {
         activeTintColor: ptColor.white,
         indicatorStyle: {
           backgroundColor: ptColor.black,
+          height: 2 * HEIGHT_SCALE_RATIO,
         },
         indicatorContainerStyle: {
           bottom: -1,

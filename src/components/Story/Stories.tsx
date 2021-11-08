@@ -3,7 +3,7 @@ import {View, Text, Image} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {userList} from 'components/Story/userList';
 import LinearGradient from 'react-native-linear-gradient';
-import {FS, ptColor} from 'constants/style';
+import {FS, HEIGHT_SCALE_RATIO, ptColor} from 'constants/style';
 // import {Image} from 'react-native';
 import {IconAdd} from 'assets/svgs';
 
@@ -35,7 +35,12 @@ const Stories = (props: Props) => {
           }}>
           Tin của bạn
         </Text>
-        <View style={{position: 'absolute', top: 55, right: 20}}>
+        <View
+          style={{
+            position: 'absolute',
+            top: 60 * HEIGHT_SCALE_RATIO,
+            right: 10 * HEIGHT_SCALE_RATIO,
+          }}>
           <IconAdd color={ptColor.appColor} />
         </View>
       </View>

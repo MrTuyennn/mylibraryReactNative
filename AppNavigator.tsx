@@ -3,9 +3,11 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import {ROUT_KEY} from 'constants/constanst';
+import BottomNavigator from 'navigation/BottomNavigator';
 import React from 'react';
 import LoadMoreData from 'screens/LoadMoreData';
 import ScreenRegex from 'screens/ScreenRegex';
+import { UiDemo } from 'screens/UiDemo';
 import SocailFirebase from 'utils/SocailFirebase';
 interface Props {}
 
@@ -19,7 +21,7 @@ const AppNavigator = (props: Props) => {
         gestureEnabled: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>
-      <Stack.Screen name={ROUT_KEY.SocailFirebase} component={SocailFirebase} />
+      <Stack.Screen name={ROUT_KEY.BottomNavigator} component={BottomNavigator} />
     </Stack.Navigator>
   );
 };

@@ -25,7 +25,7 @@ const ScreenPost = (props: Props) => {
         // onRefresh={() => {
         //     setloading(true);
         //   //   setrefesh(true);
-        
+
         //   setTimeout(() => {
         //     // setrefesh(false);
         //     setloading(false);
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
   containerImage: {
     height: 150 * HEIGHT_SCALE_RATIO,
     width: 130 * WIDTH_SCALE_RATIO,
-    flex: 1,
-    margin: 2,
+    flex: 1 / 3,
+    margin: 0.5 * HEIGHT_SCALE_RATIO,
   },
   styleImage: {
     height: '100%',

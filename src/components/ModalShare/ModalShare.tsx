@@ -1,17 +1,17 @@
 import PButton from 'components/Button/PButton';
-import {userList} from 'components/Story/userList';
+import PTouchableOpacity from 'components/Button/PTouchableOpacity';
+import { userList } from 'components/Story/userList';
 import {
   FS,
-  HEIGHT_SCALE_RATIO,
-  ptColor,
-  WIDTH_SCALE_RATIO,
+  HEIGHT,
+  HEIGHT_SCALE_RATIO, ptColor,
+  WIDTH_SCALE_RATIO
 } from 'constants/style';
-import React, {forwardRef, useImperativeHandle, useRef} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {Modalize} from 'react-native-modalize';
-import {Portal} from 'react-native-portalize';
+import React, { forwardRef, useImperativeHandle, useRef } from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { Modalize } from 'react-native-modalize';
+import { Portal } from 'react-native-portalize';
 import HeaderModalShare from './HeaderModalShare';
-import PTouchableOpacity from 'components/Button/PTouchableOpacity';
 
 interface ModalShareProps {
   onPressSelectShare?: (...args: any[]) => void;
@@ -83,8 +83,8 @@ const ModalShare = forwardRef((props: ModalShareProps, ref) => {
     <Portal>
       <Modalize
         handlePosition="inside"
-        snapPoint={300 * HEIGHT_SCALE_RATIO}
-        modalHeight={800 * HEIGHT_SCALE_RATIO}
+        snapPoint={500 * HEIGHT_SCALE_RATIO}
+        modalHeight={HEIGHT / 1.5}
         HeaderComponent={<HeaderModalShare />}
         panGestureComponentEnabled={true}
         avoidKeyboardLikeIOS={false}
