@@ -34,5 +34,7 @@ export const ROUT_KEY = {
   AnimationExample: 'AnimationExample',
   LoadMoreData: 'LoadMoreData',
   SocailFirebase: 'SocailFirebase',
-  UiDemo:'UiDemo'
+  UiDemo: 'UiDemo',
+  Shimmer: 'Shimmer',
+  DemoShimmer: 'DemoShimmer',
 };
