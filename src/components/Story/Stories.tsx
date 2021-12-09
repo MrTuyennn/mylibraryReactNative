@@ -12,7 +12,7 @@ interface Props {}
 const Stories = (props: Props) => {
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{}}>
-      <View style={{padding: 7}}>
+      <View style={{padding: 7, overflow: 'hidden'}}>
         <Image
           style={{
             height: 70,

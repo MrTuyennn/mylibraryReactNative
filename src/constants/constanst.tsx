@@ -37,4 +37,5 @@ export const ROUT_KEY = {
   UiDemo: 'UiDemo',
   Shimmer: 'Shimmer',
   DemoShimmer: 'DemoShimmer',
+  ScreenPicker: 'ScreenPicker',
 };
